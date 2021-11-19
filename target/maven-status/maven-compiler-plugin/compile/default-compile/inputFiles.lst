@@ -1,5 +1,11 @@
+/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/EncryptedVernam.java
+/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/EscitalaResource.java
 /home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/CesarService.java
-/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/Utilities.java
+/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/VernamResource.java
+/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/VernamService.java
 /home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/enigma.java
+/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/EscitalaService.java
+/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/EncryptedEscitala.java
 /home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/CesarResource.java
+/home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/EncryptedCesar.java
 /home/ubuntu/java/enigma/src/main/java/io/vallegrande/pe/Messages.java
