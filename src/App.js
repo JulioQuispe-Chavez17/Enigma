@@ -24,7 +24,7 @@ function App() {
     })
   } 
 
-  const sendData = async () => {
+  const generateEncoder = () => {
     let reqOptionsEncoder = {
       url: `/product/encrypt?chain=${chains}&columns=${columns}&key=${key}&rotations=${rotations}`,
       method: "POST"
@@ -33,7 +33,9 @@ function App() {
     axios.request(reqOptionsEncoder).then(function (response) {
       setEncoder(response.data);
     })
+  }
 
+  const generateDecoder = () => {
     let reqOptionsDecoder = {
       url: `/product/decipher?chain=${encoder}&columns=${columns}&key=${key}&rotations=${rotations}`,
       method: "POST"
@@ -42,6 +44,10 @@ function App() {
     axios.request(reqOptionsDecoder).then(function (response) {
       setDecoder(response.data);
     })
+  }
+  const send = async () => {
+    generateEncoder()
+    generateDecoder()
   };
 
   return (
@@ -50,7 +56,7 @@ function App() {
       <TextField label="Keyword" variant="outlined" value={keywords} onChange={e => setKeywords(e.target.value)}/>
       <Button variant="contained" onClick={generatedKeys}>Generate Key</Button>
       {
-        key ? <Alert severity="success">This is a success alert — {key}</Alert> : <div></div>
+        key ? <Alert severity="success">This is Key — {key}</Alert> : <div></div>
       }
       <br/>
       <TextField
@@ -72,13 +78,13 @@ function App() {
           value={rotations} onChange={e => setRotation(e.target.value)}
         />
         <TextField label="Key" variant="outlined" value={key} onChange={e => setKey(e.target.value)}/>
-      <Button variant="outlined" onClick={sendData}>Send</Button>
+      <Button variant="outlined" onClick={send}>Send</Button>
 
       {
-        encoder ? <Alert severity="success">This is a success alert — {encoder}</Alert> : <div></div>
+        encoder ? <Alert severity="success">This is Encoder — {encoder}</Alert> : <div></div>
       }
        {
-        decoder ? <Alert severity="success">This is a success alert — {decoder}</Alert> : <div></div>
+        decoder ? <Alert severity="success">This is Decoder — {decoder}</Alert> : <div></div>
       }
     </div>
   )
