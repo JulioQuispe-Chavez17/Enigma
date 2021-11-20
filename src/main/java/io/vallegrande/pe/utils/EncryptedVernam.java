@@ -5,7 +5,6 @@ import javax.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public class EncryptedVernam {
     public String generateKey(String str, String key) {
-        str.toUpperCase();
         int x = str.length();
         String generatedKey = "";
         int count = 0;
@@ -24,7 +23,7 @@ public class EncryptedVernam {
 
             count++;
         }
-        return generatedKey;
+        return generatedKey.toUpperCase();
     }
 
     public String cipherText(String text, String key) {
