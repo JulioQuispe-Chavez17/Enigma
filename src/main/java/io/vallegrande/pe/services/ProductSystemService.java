@@ -20,7 +20,7 @@ public class ProductSystemService {
     EncryptedEscitala escitala;
 
     public String encrypt(String chain, String key, int columns, int rotations) {
-        String encryptCesar = cesar.rotate(chain, rotations);
+        String encryptCesar = cesar.rotate(chain.toUpperCase(), rotations);
         String encryptVernam = vernam.cipherText(encryptCesar, key);
         String encryptEscitala = escitala.cipher(encryptVernam, columns);
         return encryptEscitala;
