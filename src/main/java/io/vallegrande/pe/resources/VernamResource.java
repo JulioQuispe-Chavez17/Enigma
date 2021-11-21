@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 
 import io.vallegrande.pe.services.VernamService;
 
-@Path("/vigenere")
+@Path("/vernam")
 @Produces(MediaType.TEXT_PLAIN)
 @Consumes(MediaType.TEXT_PLAIN)
 public class VernamResource {
