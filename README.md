@@ -94,3 +94,9 @@ Cesar -> Vernam - > Escitala = Encrypt || Escitala -> Vernam - > Vernam = Deciph
 ![](enigma/UI-product.jpg)
 
 Finalmente, he entendido la logica de los algoritmos de cifrado y te muestran un nivel base de cryptografía, que una de sus caracteristicas es proteger data sensible y más.
+
+
+./target/enigma-1.0.0-SNAPSHOT-runner
+
+docker build -f src/main/docker/Dockerfile.native -t enigma-native .
+docker run -i --rm -p 8080:8080 enigma-native
